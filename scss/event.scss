@@ -1,0 +1,202 @@
+/*
+* @Author: CharlesKo
+* @Date:   2017-10-01 19:31:26
+* @Last Modified by:   CharlesKo
+* @Last Modified time: 2017-11-13 05:14:02
+*/
+
+@mixin tester{
+	border: 1px solid orange;
+}
+
+.admin-btn button{
+	background: #cc3300;
+	color: #f2f2f2;
+}
+
+
+.events{
+	width: 80%;
+	//width: 66rem;
+	margin: 0.5rem auto;
+	position: relative;
+
+
+	//@include tester;
+
+	div{
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+
+		//@include tester;
+	}
+	input{
+		width: 95%;
+		padding: 0.2rem 0.3rem;
+
+	}
+
+	.event-date{
+		width: 10%;
+	}
+	.event-time{
+		width: 10%;
+		padding: 0;
+
+		div{
+			width: 90%;
+			margin: 0 auto;
+			padding: 0.5rem 0;
+		}
+	}
+	.event-venue{
+		width: 20%;
+	}
+	.eventname{
+		width: 15%;
+	}
+	.event-pic{
+		width: 13%;
+	}
+	.event-note{
+		width: 13%;
+		textarea{
+			padding: 0.5rem;
+			width: 80%;
+		}
+	}
+	.event-btn{
+		//width: 5%;
+		padding: 0;
+		position: absolute;
+		right: 0;
+		top: 2.3rem;
+
+		button{
+			background: #0077b3;
+			color: #f2f2f2;
+		}
+
+		.submit-btn, .cancel-btn{
+			display: none;
+		}
+
+	}
+}
+
+.event-title{
+	font-size: 1.6rem;
+	font-weight: bold;
+	position: relative;
+	margin-top: 4rem;
+	
+	div{
+		padding: 1.5rem 0;
+	}
+}
+
+.event-con{
+	font-size: 1.3rem;
+	border-bottom: 2px solid #eee;
+	
+	div{
+		padding: 1rem 0;
+	}
+}
+
+#add-event-admin{
+	width: 100%;
+	//margin: 0 auto 4rem auto;
+	text-align: left;
+
+	position: absolute;
+	top: -9rem;
+	z-index: 90;
+
+	//@include tester;
+
+	div{
+		text-align: left;
+	}
+	
+	.add-title{
+		display: inline-block;
+		//padding: 0.3rem 1rem;
+		background: #4080bf;
+		color: #f2f2f2;
+
+		//@include tester;
+
+		div{
+			display: inline-block;
+			font-size: 1.8rem;
+			font-weight: bold;
+			padding: 0rem 1rem;
+		}
+	}
+
+	.add-con{
+		text-align: center;
+		padding-top: 2rem;
+		margin-top: 1rem;
+		border: 2px solid #999;
+		display: none;
+		background: #f2f2f2;
+
+		//@include tester;
+
+		div{
+			display: inline-block;
+			text-align: left;
+			vertical-align: top;
+			width: 49%;
+			padding: 0.6rem 0;
+
+			//@include tester;
+
+			input:first-child, textarea{
+				margin-left: 1rem;
+			}
+			textarea{
+				width: 90%;
+				padding: 0.2rem;
+				border: 1px solid #999;
+				outline: none;
+			}
+		}
+
+		input{
+			font-size: 1.3rem;
+			padding: 0.3rem;
+			border: 1px solid #999;
+			outline: none;
+		}
+
+		.add-date{
+			input{
+				width: 24%;
+			}
+		}
+		.add-time{
+			input{
+				width: 35%;
+			}
+		}
+		.add-eventname, .add-venue, .add-pic{
+			input{
+				width: 90%;
+			}
+		}
+		.submit-btn{
+			text-align: center;
+			margin-top: 1rem;
+		}
+	}
+}
+
+.idvalue{
+	span{
+		display: none;
+	}
+}

@@ -1,0 +1,89 @@
+
+@mixin tester{
+	border: 1px solid orange;
+}
+
+.members{
+	width: 70%;
+	//min-width: 65rem;
+	margin: 8rem auto 0 auto;
+	@include tester;
+
+	.member-con{
+		width: 46%;
+		height: 100px;
+		display: inline-block;
+		margin: 1rem 0.5rem;
+		border: 2px solid #e9ebee;
+		border-radius: 10px;
+		//box-shadow: -3px 5px 20px #999;
+		//line-height: 100px;
+
+		a{
+			text-decoration: none;
+			color: #365899;
+		}
+	}
+	.member-con:hover{
+		background: #e6f2ff;
+	}
+
+	.member-img-holder{
+		display: inline-block;
+		width: 80px;
+		margin: 0 0.4rem;
+	}
+
+	img{
+		width: 100%;
+		//height: 100px;
+		margin: 0;
+		display: inline-block;
+
+		vertical-align: middle;
+		//border: 3px solid #f2f2f2;
+	}
+
+	p{
+		margin: 0;
+		padding: 0 10px;
+		display: inline-block;
+		width: 55%;
+		height: 100px;
+
+		vertical-align: middle;
+
+		span{
+			display: inline-block;
+			margin:0;
+			width: 70%;
+			color: #929292;
+			//min-height: 1.5rem;
+			line-height: 1rem;
+			//@include tester;
+		}
+	}
+
+	.member-name{
+		font-size: 1.6rem;
+		font-weight: bold;
+		margin-top: 2rem;
+	}
+
+}
+
+@media only screen and (max-width: 800px){
+	.members{
+		margin-top: 3rem;
+		.member-con{
+			width: 95%;
+			margin: 0.5rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 480px){
+	.members{
+		width: 100%;
+	}
+}

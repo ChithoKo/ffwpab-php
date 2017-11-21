@@ -1,0 +1,214 @@
+
+@mixin tester{
+	border: 1px solid #009999;
+}
+
+$middle: 100%;
+
+@mixin hiddenpart{
+	//display: none;
+}
+
+@mixin submitButton{
+	border: 0;
+	background-color: #4080bf;
+	color: #ffffff;
+}
+
+@mixin subtitle{
+	color: #a6a6a6;
+	text-align: center;
+	width: 80%;
+	margin: 0 auto;
+}
+
+@mixin formWhole{
+	padding: 20px 0;
+}
+
+@mixin formRow{
+	text-align: center;
+	padding: 5px 0;
+}
+
+@mixin choice{
+	margin: 0 10px;
+	padding: 20px;
+	border-bottom: 1px solid #d9d9d9;
+	//@include tester;
+}
+
+@mixin choiceOption{
+	display: inline-block;
+	width: 49%;
+	margin: 0;
+	height: 30px;
+	font-size: 16px;
+	line-height: 30px;
+	text-align: center;
+
+	//@include tester;
+	//border-bottom: 3px solid #009999;
+}
+
+@mixin input{
+	width: 60%;
+	height: 30px;
+	font-size: 15px;
+	margin: 5px;
+	padding: 3px 15px;
+}
+
+body{
+	margin: 0;
+	background-color: rgb(235, 235, 235);
+}
+
+#navigateL{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	height: 130px;
+	text-align: center;
+	background-color: rgb(235, 235, 235);
+	color: #f2f2f2;
+	border: 1px solid rgb(235, 235, 235);
+
+	h1{
+		border-bottom: 7px solid #ac3939;
+		//background-color: #515151;
+		background-color: #2a2a2a;
+		height: 90px;
+		width: 500px;
+		margin: 15px auto 0 auto;
+		font-size: 50px;
+		line-height: 90px;
+
+		span{
+			text-decoration: underline;
+		}
+	}
+}
+
+
+#contentForm{
+
+	
+
+	width: 40%;
+	min-width: 570px;
+	margin: 45px auto;
+	background-color: #ffffff;
+	//@include tester;
+
+	#contentHeading{
+		width: $middle;
+		text-align: center;
+		padding: 25px 0;
+		margin: 0;
+		//@include tester;
+
+		span{
+			font-style: italic;
+			color: #999999;
+		}
+	}
+
+	.subtitle{
+		@include subtitle;
+		@include tester;
+		
+		p{
+			width: 58%;
+			margin: 0 auto;
+			padding: 10px 0;
+			@include tester;
+		}
+	}
+
+	.choice{
+		@include choice;
+
+
+
+		.choiceOption{
+			@include choiceOption;
+		}
+
+		.choiceOption:hover{
+			border-bottom: 3px solid #009999;
+		}
+	}
+
+	.activeOption{
+		border-bottom: 3px solid #009999;
+	}
+
+	
+
+	#loginForm{
+
+		//@include tester;
+
+		//display: none;
+
+		@include hiddenpart;
+
+		@include formWhole;
+		width: $middle;
+		
+		
+
+		.loginForm{
+			width: $middle;
+			@include formRow;
+
+			.infoLog{
+				@include input;
+			}
+
+			#saveInfo{
+				width: 60%;
+				margin: 5px auto;
+				text-align: left;
+			}
+		}
+	}
+
+	#regisForm{
+
+		//@include tester;
+
+		display: none;
+
+		width: $middle;
+		
+		@include formWhole;
+
+		.regisForm{
+			width: middle;
+			text-align: center;
+			@include formRow;
+
+			input{
+				@include input;
+
+			}
+
+			.titleReg{
+					width: 20%;
+					margin: 0;
+				}
+
+			.numberReg{
+				width: 40%;
+				margin: 0;
+			}
+		}
+	}
+
+	.submit{
+		@include submitButton;
+	}
+	
+}

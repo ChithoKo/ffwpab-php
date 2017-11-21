@@ -1,0 +1,58 @@
+DROP TABLE IF EXISTS stjohn_members;
+CREATE TABLE stjohn_members(
+	id SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    password CHAR(100) NOT NULL,
+    title VARCHAR(20) NOT NULL,
+    tnum TINYINT NOT NULL,
+    dutyHrs TINYINT NOT NULL,
+    meetHrs TINYINT NOT NULL,
+    reg_date TIMESTAMP NOT NULL,
+    status TEXT
+);
+
+DROP TABLE IF EXISTS stjohn_admin;
+CREATE TABLE stjohn_admin(
+	id TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    password CHAR(100) NOT NULL,
+    reg_date TIMESTAMP NOT NULL
+);
+
+DROP TABLE IF EXISTS stjohn_duty;
+CREATE TABLE stjohn_duty(
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    dutyname VARCHAR(100) NOT NULL,
+    starttime TIMESTAMP NOT NULL,
+    endtime TIMESTAMP NOT NULL,
+    state VARCHAR(30),
+    note TEXT
+);
+
+DROP TABLE IF EXISTS stjohn_meeting;
+CREATE TABLE stjohn_meeting(
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    eventname VARCHAR(100) NOT NULL,
+    starttime TIMESTAMP NOT NULL,
+    endtime TIMESTAMP NOT NULL,
+    state VARCHAR(30),
+    note TEXT
+);
+
+DROP TABLE IF EXISTS stjohn_attendents;
+CREATE TABLE stjohn_attendents(
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    mid INT UNSIGNED NOT NULL,
+    did INT UNSIGNED NOT NULL,
+    starttime TIMESTAMP NOT NULL,
+    endtime TIMESTAMP NOT NULL
+);
+
+DROP TABLE IF EXISTS stjohn_notice;
+CREATE TABLE stjohn_notice(
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    content TEXT NOT NULL,
+    time TIMESTAMP,
+    state VARCHAR(30)
+);
+

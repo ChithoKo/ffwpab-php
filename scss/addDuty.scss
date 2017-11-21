@@ -1,0 +1,88 @@
+
+@mixin tester{
+	border: 1px solid orange;
+}
+
+$inputwidth: 330px;
+
+
+
+body{
+	background-color: #f2f2f2;
+}
+
+
+#subnavi{
+
+	position: relative;
+	height: 50px;
+	width: 90px;
+	margin: 50px auto 50px 80px;
+	background-color: white;
+	//@include tester; 
+
+	.content{
+		width: 100%;
+		line-height: 50px;
+		text-align: center;
+	}	
+
+	.color{ 
+		position: absolute;
+		top: 0;
+		left: -50px;
+		border: 25px solid transparent;
+		border-right-color: white;
+	}
+}
+
+
+#tablename{
+	width: 100%;
+	text-align: center;
+	font-size: 18px;
+}
+
+
+#addDutyForm{
+	width: 100%;
+	//@include tester;
+	text-align: center;
+
+	div{
+		margin: 15px auto;
+		//@include tester;
+	}
+
+	input{
+		font-size: 15px;
+		padding: 0 20px;
+		height: 30px;
+		width: $inputwidth;
+		line-height: 30px;
+	}
+
+	textarea{
+		font-size: 15px;
+		width: $inputwidth;
+		height: 60px;
+		padding: 0 20px;
+	}
+
+	.dateform{
+		width: 15px;
+		padding: 0 25px;
+	}
+
+	.submitbutton{
+		height: 30px;
+		line-height: 30px;
+		padding: 0;
+	}
+
+}
+
+
+
+
+

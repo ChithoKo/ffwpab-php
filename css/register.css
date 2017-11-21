@@ -1,0 +1,83 @@
+body {
+  background-color: #f2f2f2;
+  font-size: 1.4rem; }
+
+#tablename {
+  width: 100%;
+  text-align: center;
+  font-size: 18px; }
+
+#registration {
+  width: 80%;
+  min-width: 66rem;
+  margin: 3rem auto;
+  text-align: center;
+  background-color: white; }
+  #registration .finished {
+    display: none; }
+  #registration a {
+    color: black;
+    display: inline-block;
+    background-color: #f2f2f2; }
+  #registration table {
+    width: 100%;
+    border-collapse: collapse; }
+  #registration .title {
+    color: #003566;
+    font-weight: bolder;
+    border-bottom: 8px solid #f2f2f2; }
+  #registration .data {
+    border-bottom: 8px solid #f2f2f2; }
+
+td, th {
+  padding: 1.6rem 0.1rem; }
+
+.regis-event, .regis-venue {
+  width: 17%;
+  font-weight: bold; }
+
+.regis-date {
+  width: 11%; }
+
+.regis-time {
+  width: 10%; }
+
+.regis-members {
+  min-width: 7.5rem;
+  width: 15%;
+  vertical-align: middle;
+  padding: 1.6rem 0; }
+  .regis-members .candidate {
+    margin: 3px auto;
+    width: 95%;
+    min-width: 7rem; }
+  .regis-members .membername {
+    display: inline-block;
+    width: 62%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    margin: 0;
+    border: 1px solid orange; }
+  .regis-members img {
+    vertical-align: middle;
+    width: 2.3rem; }
+
+.regis-miss {
+  width: 3.5rem;
+  padding: 0 0.5rem; }
+
+.regis-note {
+  padding: 0 2rem; }
+
+.regis-state {
+  width: 60px; }
+
+.regis-edit {
+  width: 8rem; }
+
+button {
+  padding: 0.5rem;
+  background: #0077b3;
+  color: #f2f2f2; }
+
+/*# sourceMappingURL=register.css.map */
